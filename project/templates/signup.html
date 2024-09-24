@@ -2,6 +2,79 @@
 
 {% load static %}
 {% block title %} Sign-UP {% endblock title %} 
+
+{% block stylecss %}
+<link 
+    rel="stylesheet"
+    href="{% static 'assets/css/loginform.css' %}"
+
+
+/>
+
+{% endblock stylecss %}
+
 {% block body %}
-<h1>Signup</h1>
+
+<h1> SignUp Form goes here</h1>
+<!-- signup form goes from here-->
+<div class="form2">
+    <br>
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+    <form class="signup-form" action="/auth/signup/" method="post">{% csrf_token %}
+
+        <label for="user-fname">First Name:</label><br>
+        <input type="text" placeholder="User fname" name="fname" required><br>
+
+        <label for="userlname" id="userlname"> User lname:</label><br>
+        <input type="text" placeholder="User lname" name="lname" required><br>
+        
+        <label for="password">Type Password:</label><br>
+        <input type="password" placeholder="type password" name="pass1" required><br><br>
+
+        <label for="password">ReType Password:</label><br>
+        <input type="password" placeholder="retype password" name="pass2" required><br><br>
+
+        <label for="country"> Select your country</label><br>
+        <select class="selectcountry" id="selectcountry">
+            
+            <option value="Nepal">Nepal</option>
+            <option value="Nepal">America</option>
+            <option value="Nepal">Australia</option>
+            <option value="Nepal">Canada</option>
+            <option value="Nepal">India</option>
+            
+
+        </select>
+        <button id="signup" type="submit">SignUp</button>
+        Already  User ? <a href="/auth/login/">login</a>
+
+    
+    </form>
+</div>
+
+
+
 {% endblock body %}
+{% block scripts %}
+<script>
+    function generateUsername() {
+        const firstName = document.getElementById('fname').value;
+        const usernameField = document.getElementById('username');
+    
+        // Only generate the username if the first name is filled
+        if (fname) {
+            usernameField.value = `${fname.toLowerCase()}@dubo`; // Append @dubo to the lowercase first name
+        } else {
+            usernameField.value = '';  // Clear the username if first name is empty
+        }
+    }
+</script>
+    
+
+{% endblock scripts %}

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding:0;
+        
+}
+div.form1{
+    flex-direction: column;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+div.form1 form.login-form{
+    
+    /* display:none; */
+    flex-direction: column;
+    border: 5px solid green;
+    padding: 120px 80px 120px 50px;
+    border-radius: 25px;
+   
+    margin:10% 20%;
+
+}
+/* form content customization here */
+div.form1 form.login-form label{
+    font-size: 30px;
+    color:rgb(0, 0, 0)
+    
+}
+
+
+div.form1 form.login-form input{
+    width: 100%;
+    border: 2px solid blue;
+    border-radius: 12.5px;
+    padding: 15px 25px;
+    margin:10px 20px;
+
+}
+
+div.form1 form.login-form input[type=text], input[type=password], input[type=button]{
+    font-size: 25px;
+}
+/* div.form1 form.login-form input[placeholder]{
+    
+} */
+ #signup:hover :form[login-form]{
+    display:flex;
+ }
+
+
+
+ /* second div for signup  */
+ div.form2{
+    
+    flex-direction: column;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+div.form2 form.signup-form{
+/*     
+    display:none; */
+    flex-direction: column;
+    border: 5px solid green;
+    padding: 120px 80px 120px 50px;
+    border-radius: 25px;
+   
+    margin:10% 20%;
+
+}
+/* form content customization here */
+div.form2 form.signup-form label{
+    font-size: 30px;
+    color:rgb(0, 0, 0)
+    
+}
+
+
+div.form2 form.signup-form input{
+    width: 100%;
+    border: 2px solid blue;
+    border-radius: 12.5px;
+    padding: 15px 25px;
+    margin:10px 20px;
+
+}
+
+div.form2 form.signup-form input[type=text], input[type=password], input[type=button]{
+    font-size: 25px;
+}
+/* div.form1 form.login-form input[placeholder]{
+    
+} */
+ #signup:hover :form[login-form]{
+    display:flex;
+ }
+
+
+ /* select option customization goes from here */
+ form.signup-form select.selectcountry {
+    padding:15px 85px;
+    font-size: 25px;
+    margin-left: 23px;
+    border: 1px solid blue;
+    border-radius: 12.5px;
+
+ }
+
+ form.signup-form select.selectcountry option{
+    padding: 15px 25px;    
+    font-size: 25px;
+ }
+ input[type=text]:focus{
+    background-color: red;
+ }
+ input[type=password]:focus{
+    background-color: brown;
+ }
+ input[type=button]:focus{
+    background-color: rgb(0, 119, 255);
+ }
+ #login:hover{
+    background-color: rgb(42, 102, 172);
+ }
